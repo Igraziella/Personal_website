@@ -5,10 +5,10 @@
 }
 
 body {
-    background-color: #edeef2;
+    background-color: #fff;
     height: 100vh;
     width: 100%;
-    color: #4a4545;
+    color: #000;
 }
 
 .nav-bar {
@@ -30,7 +30,7 @@ nav ul {
 
 nav li a {
     text-decoration: none;
-    color: #4a4545;
+    color: #000;
 }
 
 .hero {
@@ -40,7 +40,7 @@ nav li a {
     align-items: center;
     gap: 10%;
     padding: 10%;
-    line-height: 1.2em;
+    line-height: 1.4em;
 }
 
 h1 {
@@ -55,27 +55,6 @@ h2 {
     margin-top: 30px;
     margin-bottom: 5px;
  }
-
-.hero .image {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    max-width: 300px; 
-    max-height: 300px;
-    overflow: hidden;
-}
-
-.hero .image img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
 
 button {
     background-color: #b190d1;
@@ -95,9 +74,32 @@ footer {
     background-color: #404248;
     padding: 2rem;
     color: #fff;
+    display: flex;
+    justify-content: space-around;    
 }
-
+ 
 footer a {
     text-decoration: none;
     color: #fff;
+}
+
+@media (max-width: 450px) {
+    nav ul {
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    h1 {
+        margin-top: 15px;
+    }
+
+    footer {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
 }
