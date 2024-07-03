@@ -27,6 +27,11 @@ body {
     border-color: #ccc;
 }
 
+.display-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
 nav ul {
     display: flex;
     gap: 30px;
@@ -123,6 +128,10 @@ button a {
         font-size: 10px;
         padding: 5px;
         margin-left: 10px;
+    }
+
+    .display-name {
+        font-size: 14px;
     }
 
     nav ul {
