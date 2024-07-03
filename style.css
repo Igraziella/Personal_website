@@ -130,7 +130,7 @@ button a {
     }
 
     #date-time-container {
-        display: inline-block;
+        margin-right: 10px;
     }
 
     .hero {
