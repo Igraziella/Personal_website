@@ -9,7 +9,9 @@
 
 <body>
     <div class="container">
-        <div class="nav-bar">
+        <!-- Header -->
+        <header class="nav-bar">
+
             <div data-testid="slackDisplayName">
                 Ijeoma Graziella
             </div>
@@ -21,7 +23,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#goal">My Goal</a>
+                            <a href="#goal">Goal</a>
                         </li>
 
                         <li class="nav-item">
@@ -30,8 +32,15 @@
                     
                     </ul>
                 </nav>
-        </div>
+
+                <div class="date-time" id="date-time-container">
+                    <span data-testid="currentDay"></span>
+                    <span data-testid="currentTimeUTC"></span>
+                </div>    
+
+            </header>
         
+        <!-- Hero -->
         <div class="hero">
             <div class="image" data-testid="slackProfilePicture">
                 <img src="picture.jpg" alt="my_photo">
@@ -43,29 +52,40 @@
                     <p>A Frontend Software Development intern at HNG</p>
                 
                     <h2>Goal</h2>
-                    <p>My aspirations in the Tech field goes beyond being able to create beautiful websites to creating edTech apps that make learning easy and accessible to many, becoming a name to reckon with in the Tech world in the next two years</p>
+                    <p>My aspiration in the Tech field goes beyond being able to create beautiful websites to creating impactful apps, particularly edTech apps that make learning easy and accessible to many, becoming a name to reckon with in the Tech world in the next two years</p>
                     
                     <div>Want to join me on this journey with HNG? <br>
                         <button data-testid="hngLink"><a href="http://hng.tech/learn">Start Now</a></button>
                     </div>
 
+                    <div class="other-links">
+                        <div data-testid="keywordLink">
+                            <a href="http://keyword.dog/">Keyword</a>
+                        </div>
+                        <hr>
+                        <div data-testid="scrapeanywebLink">
+                            <a href="http://scrapeanyweb.site/">Scrape Any Web</a>
+                        </div>
+                    </div>
+
+                    <div data-testid="slackEmail" class="email">
+                        Contact me: igraziella@gmail.com
+                    </div>
+
                 </div>
             </div>
         </div>
-        <footer>
-            <div>
-                <p>Tuesday <br> 10:03:11pm</p>
-            </div>
-            <div data-testid="slackEmail">
-                Email: igraziella@gmail.com
-            </div>
-            <div data-testid="keywordLink">
-                <a href="http://keyword.dog/">Keyword</a>
-            </div>
-            <div data-testid="scrapeanywebLink">
-                <a href="http://scrapeanyweb.site/">Scrape Any Web</a>
-            </div>
-        </footer>
     </div>
+
+    <!-- Javascript -->
+    <script>
+        let date = document.getElementById("date-time-container");
+
+        setInterval(() => {
+        let currentDay = new Date();
+        date.innerHTML = currentDay.toUTCString()
+    },1000);
+    </script>
+    
 </body>
 </html>
